@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    font-size: sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(120deg, #1773a8d8, #437515da);
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.grid-container > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: #111;
+    color: #ffffff;
+    margin: 3px;
+    border-radius: 15px;
+}
+
+.grid-container > button:hover {
+    background-color: #eee;
+    color: #111;
+}
+
+.grid-container > .operator {
+    background: chocolate;
+}
+
+.span-row {
+    grid-row: span 2;
+}
+
+.span-column {
+    grid-column: span 2;
+}
+
+.grid-container > .output {
+   grid-column: 1 / -1;
+    background: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+.grid-container > .output > .previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.grid-container > .output > .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
